@@ -1,15 +1,15 @@
 <form class="" action="{{ route('profile') }}" name="registration" id="registration" method="post">
     @csrf
     <div class="accordion" id="accordionExample">
-        <div class="card">
+        <div class="card" style="border-radius: 15px;">
             <div class="card-header" id="headingOne">
               <h2 class="mb-0">
-                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                <button class="btn btn-link button-face" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                     Step 1: Yor details
                 </button>
               </h2>
             </div>
-            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+            <div id="collapseOne" class="collapse show custom-bg" aria-labelledby="headingOne" data-parent="#accordionExample">
                 <div class="card-body">
                     <div class="form-group">
                         <div class="row">
@@ -34,22 +34,22 @@
                     <div class="form-group">
                         <div class="row">
                             <div class="col-md-12 text-right">
-                                <button class="btn btn-info step-one-btn" type="button" name="button">Next ></button>
+                                <button class="btn btn-info step-one-btn form-button" type="button" name="button">Next ></button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="card">
+        <div class="card" style="border-radius: 15px; margin-top:3px;">
             <div class="card-header" id="headingTwo">
                 <h2 class="mb-0">
-                    <button class="btn btn-link collapsed step-two" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    <button class="btn btn-link collapsed button-face step-two" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                         Step 2: More comments
                     </button>
                 </h2>
             </div>
-            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+            <div id="collapseTwo" class="collapse custom-bg" aria-labelledby="headingTwo" data-parent="#accordionExample">
                 <div class="card-body">
                     <div class="form-group">
                         <div class="row">
@@ -84,37 +84,44 @@
                     <div class="form-group">
                       <div class="row">
                           <div class="col-md-12 text-right">
-                              <button class="btn btn-info step-two-btn" type="button" name="button">Next ></button>
+                              <button class="btn btn-info step-two-btn form-button" type="button" name="button">Next ></button>
                           </div>
                       </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="card">
+        <div class="card" style="border-radius: 15px; margin-top:3px;">
             <div class="card-header" id="headingThree">
                 <h2 class="mb-0">
-                    <button class="btn btn-link collapsed step-three" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    <button class="btn btn-link collapsed button-face step-three" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                         Step 3: Final comments
                     </button>
                 </h2>
             </div>
-            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+            <div id="collapseThree" class="collapse custom-bg" aria-labelledby="headingThree" data-parent="#accordionExample">
                 <div class="card-body">
                     <div class="form-group">
-                        <div class="row">
+                        <div class="container">
+                            <div class="row">
+                                <div class="align-self-start">
+                                    <label for="comments">Comments</label>
+                                    <textarea class="form-control comments" id="comments" name="comments"></textarea>
+                                </div>
+                                <div class="col align-self-end text-right">
+                                    <button class="btn btn-info submit form-button" type="submit" name="button">Next ></button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="row">
                             <div class="col-md-4">
                                 <label for="comments">Comments</label>
-                                <textarea class="form-control" id="comments" name="comments"></textarea>
+                                <textarea class="form-control comments" id="comments" name="comments"></textarea>
                             </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="row">
-                            <div class="col-md-12 text-right">
-                                <button class="btn btn-info submit" type="submit" name="button">Next ></button>
+                            <div class="col-md-8 text-right align-items-end">
+                                    <button class="btn btn-info submit form-button" type="submit" name="button">Next ></button>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
